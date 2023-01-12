@@ -8,7 +8,7 @@ const downloadBtn = document.querySelector('#download')
 
 const calculate = () => {
 
-    fetch(`http://api.nbp.pl/api/exchangerates/tables/A/`)
+    fetch(`https://api.nbp.pl/api/exchangerates/tables/A/`)
         .then(res => res.json())
         .then(data => {
             currencyData = data[0].rates;
@@ -39,7 +39,7 @@ const swap = () => {
 }
 
 const download = () => {
-    fetch(`http://api.nbp.pl/api/exchangerates/tables/A/`)
+    fetch(`https://api.nbp.pl/api/exchangerates/tables/A/`)
         .then(res => res.json())
         .then(data => {
             let yourDate = new Date();
@@ -59,7 +59,6 @@ currencyOne.addEventListener('change', calculate);
 currencyTwo.addEventListener('change', calculate);
 amountOne.addEventListener('input', calculate);
 swapBtn.addEventListener('click', swap)
-swapBtn.addEventListener('click', download)
 downloadBtn.addEventListener('click', download)
 
 
