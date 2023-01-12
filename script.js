@@ -25,8 +25,8 @@ const calculate = () => {
                     rate2 = data.mid;
                 }
             });
-            rateInfo.innerHTML = 'rate info: ' + (rate2 / rate1).toFixed(4);
-            amountTwo.value = (amountOne.value * rate2 / rate1).toFixed(2)
+            rateInfo.innerHTML = 'rate info: ' + (rate1 / rate2).toFixed(4);
+            amountTwo.value = (amountOne.value * rate1 / rate2).toFixed(2)
 
         })
 }
